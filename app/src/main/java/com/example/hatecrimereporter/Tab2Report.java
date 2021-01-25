@@ -72,7 +72,7 @@ public class Tab2Report extends Fragment implements View.OnClickListener{
                 format += "Time: " + timeT +"<br><br>";
                 format += "Crime description: " +tex +"<br><br>";
                 format += "";
-                SendMail mailer = new SendMail("futurus.001@gmail.com",
+                SendMail mailer = new SendMail("throwawayreporteremail@gmail.com",
                         "oliviazhou2001@gmail.com","Hate Crime","TextBody",
                          format);
                 try {

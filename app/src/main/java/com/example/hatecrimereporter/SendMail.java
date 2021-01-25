@@ -99,7 +99,7 @@ public class SendMail{
 //        Session session = Session.getInstance(properties, new Authenticator() {
 //            @Override
 //            protected PasswordAuthentication getPasswordAuthentication() {
-//                return new PasswordAuthentication("futurus.001@gmail.com", "adorious");
+//                return new PasswordAuthentication("throwawayreporteremail@gmail.com", "adorious");
 //            }
 //        })
         Session session;
@@ -244,8 +244,8 @@ public class SendMail{
         @Override
         protected PasswordAuthentication getPasswordAuthentication() {
 
-            String username = "futurus.001@gmail.com";
-            String password = "adorious";
+            String username = "throwawayreporteremail@gmail.com";
+            String password = "strongpassword";
 
             return new PasswordAuthentication(username, password);
         }
