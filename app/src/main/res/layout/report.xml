@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:verticalScrollbarPosition="right"
+    tools:context="Tab2Report">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="Name"
+                android:layout_marginLeft="8dp"
+
+
+                android:inputType="textPersonName" />
+
+<!--            <DatePicker-->
+<!--                android:id="@+id/datePicker"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/editTextName"-->
+<!--                android:timePickerMode="spinner" />-->
+
+<!--            <TimePicker-->
+<!--                android:id="@+id/timePicker"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/datePicker"-->
+<!--                android:timePickerMode="spinner" />-->
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextName"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/textbox"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint=" Date"
+                android:inputType="none" />
+
+            <EditText
+                android:id="@+id/editTextTime"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/editTextDate"
+                android:background="@drawable/textbox"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint=" Time"
+                android:inputType="none" />
+
+            <EditText
+                android:id="@+id/describeCrimeInput"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/editTextDate"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/textbox"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Describe Crime"
+                android:inputType="textPersonName|textMultiLine"
+                android:padding="12dp"
+                android:scrollHorizontally="false"
+                android:verticalScrollbarPosition="right" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="8dp"
+                android:text="Check if True"
+                android:layout_below="@+id/describeCrimeInput"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Do you know the suspect's identity?" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/checkBox"
+                android:text="If you don't know who they are, have you ever seen them before?" />
+
+            <EditText
+                android:id="@+id/describeSuspectInput"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/checkBox2"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/textbox"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Describe suspect"
+                android:inputType="textPersonName|textMultiLine"
+                android:padding="12dp"
+                android:scrollHorizontally="false"
+                android:verticalScrollbarPosition="right" />
+
+            <Button
+                android:id="@+id/submitReport"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@+id/describeSuspectInput"
+                android:gravity="center"
+                android:text="Submit Report"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
