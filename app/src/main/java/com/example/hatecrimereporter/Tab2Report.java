@@ -31,13 +31,14 @@ public class Tab2Report extends Fragment implements View.OnClickListener{
     final Calendar myCalendar = Calendar.getInstance();
     EditText editDate;
     EditText editTime;
+    View view;
 
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.report, container, false);
-
+        this.view = view;
         Button button = (Button) view.findViewById(R.id.submitReport);
         button.setOnClickListener(this);
 
@@ -61,9 +62,19 @@ public class Tab2Report extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.submitReport:
+                EditText body = (EditText) view.findViewById(R.id.describeCrimeInput);
+                String tex = body.getText().toString();
+                String dateD = editDate.getText().toString();
+                String timeT = editTime.getText().toString();
+
+                String format = "";
+                format += "Date: " + dateD +"<br><br>";
+                format += "Time: " + timeT +"<br><br>";
+                format += "Crime description: " +tex +"<br><br>";
+                format += "";
                 SendMail mailer = new SendMail("futurus.001@gmail.com",
-                        "oliviazhou2001@gmail.com","Subject","TextBody",
-                        "<b>HtmlBody</b>");
+                        "oliviazhou2001@gmail.com","Hate Crime","TextBody",
+                         format);
                 try {
                     mailer.sendAuthenticated();
                 } catch (Exception e) {
@@ -82,7 +93,7 @@ public class Tab2Report extends Fragment implements View.OnClickListener{
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
 
-                        editTime.setText(selectedHour+":"+selectedMinute);
+                        editTime.setText(" "+selectedHour+":"+selectedMinute);
                     }
 
                 };
@@ -104,7 +115,7 @@ public class Tab2Report extends Fragment implements View.OnClickListener{
                         String myFormat = "MM/dd/yy"; //In which you need put here
                         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.CANADA);
 
-                        editDate.setText(sdf.format(myCalendar.getTime()));
+                        editDate.setText(" "+sdf.format(myCalendar.getTime()));
                     }
 
                 };

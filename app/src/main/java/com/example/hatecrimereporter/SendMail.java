@@ -1,6 +1,8 @@
 package com.example.hatecrimereporter;//package com.myapp.android.model.service;
 
 
+import android.os.AsyncTask;
+
 import java.util.Calendar;
 import java.util.Properties;
 
@@ -17,7 +19,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMultipart;
 
-public class SendMail {
+public class SendMail{
     // public static final String MAIL_SERVER = "localhost";
 
     private String toList;
@@ -310,3 +312,7 @@ public class SendMail {
     }
 
 }
+
+//String message = "s";
+//String string = "m";
+//public class A extends AsyncTask<message, string, string>
